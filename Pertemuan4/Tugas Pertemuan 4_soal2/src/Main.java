@@ -28,9 +28,9 @@ public class Main {
 
         System.out.println();
 //        Memeriksa pesanan dengan bookingId
-        movieApp.searchBooking(70);
-        movieApp.searchBooking(90);
-        movieApp.searchBooking(50);
+        movieApp.searchBooking(51);
+        movieApp.searchBooking(41);
+        movieApp.searchBooking(42);
 
 
     }

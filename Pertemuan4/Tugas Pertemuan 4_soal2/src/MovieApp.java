@@ -36,7 +36,7 @@ public class MovieApp {
                     System.out.println("Pesanan berhasil dengan detail pesanan : ");
                     System.out.println("Film : " + movie.title);
                     System.out.println("Jumlah Tiket : " + numberOfTickets);
-                    int bookingId = movie.availableSeats + numberOfTickets;
+                    int bookingId = movie.availableSeats + listBooking.size()+1 ;
                     System.out.println("Booking ID : " + bookingId);
                     Booking booking = new Booking(movie,numberOfTickets,bookingId);
                     listBooking.add(booking);

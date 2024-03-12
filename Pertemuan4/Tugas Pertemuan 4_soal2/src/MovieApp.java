@@ -40,7 +40,6 @@ public class MovieApp {
                     System.out.println("Booking ID : " + bookingId);
                     Booking booking = new Booking(movie,numberOfTickets,bookingId);
                     listBooking.add(booking);
-
                 }
                 else{
                     System.out.println("Pesanan tidak dapat diproses karena kursi tidak tersedia.");
@@ -62,7 +61,5 @@ public class MovieApp {
         else{
             System.out.println("Pesanan Tidak Ditemukan");
         }
-
     }
-
 }

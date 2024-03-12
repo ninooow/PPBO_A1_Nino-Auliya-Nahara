@@ -8,5 +8,4 @@ public class Booking {
         this.numberOfTickets = numberOfTickets;
         this.bookingId = bookingId;
     }
-
 }

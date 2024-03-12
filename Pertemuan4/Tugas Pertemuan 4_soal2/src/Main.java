@@ -33,6 +33,5 @@ public class Main {
         movieApp.searchBooking(50);
 
 
-
     }
 }

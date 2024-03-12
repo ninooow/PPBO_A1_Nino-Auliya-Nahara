@@ -11,11 +11,4 @@ public class Film {
         this.duration = duration;
         this.availableSeats = availableSeats;
     }
-
-    String getTitle(){
-        return title;
-    }
-    int getAvailableSeats(){
-        return availableSeats;
-    }
 }

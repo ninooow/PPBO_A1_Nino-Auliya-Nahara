@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 public class MovieApp {
     List<Film> listFilm = new ArrayList<>();

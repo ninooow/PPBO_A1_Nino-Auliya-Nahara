@@ -22,12 +22,15 @@ public class Main {
         movieApp.bookFilm(agakLaen, 20);
         System.out.println();
         movieApp.bookFilm(pasutriGaje, 50);
+        System.out.println();
+        movieApp.bookFilm(pasutriGaje, 10);
         movieApp.displayAllFilms();
 
         System.out.println();
 //        Memeriksa pesanan dengan bookingId
         movieApp.searchBooking(70);
         movieApp.searchBooking(90);
+        movieApp.searchBooking(50);
 
 
 

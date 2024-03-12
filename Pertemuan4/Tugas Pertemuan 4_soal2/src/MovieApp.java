@@ -37,11 +37,10 @@ public class MovieApp {
                     System.out.println("Film : " + movie.title);
                     System.out.println("Jumlah Tiket : " + numberOfTickets);
                     int bookingId = movie.availableSeats + numberOfTickets;
+                    System.out.println("Booking ID : " + bookingId);
                     Booking booking = new Booking(movie,numberOfTickets,bookingId);
                     listBooking.add(booking);
-                    for (Booking book : listBooking){
-                        System.out.println("Booking ID : " + book.bookingId);
-                    }
+
                 }
                 else{
                     System.out.println("Pesanan tidak dapat diproses karena kursi tidak tersedia.");
@@ -51,14 +50,19 @@ public class MovieApp {
     }
 
     void searchBooking(int bookid){
+        int y = 0;
         for (Booking book : listBooking){
             if (book.bookingId == bookid){
-                System.out.println("Pesanan Ditemukan");
-            }
-            else{
-                System.out.println("Pesanan Tidak Ditemukan");
+                y = 1;
             }
         }
+        if (y==1){
+            System.out.println("Pesanan Ditemukan");
+        }
+        else{
+            System.out.println("Pesanan Tidak Ditemukan");
+        }
+
     }
 
 }

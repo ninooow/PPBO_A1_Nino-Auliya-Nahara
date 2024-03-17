@@ -35,5 +35,4 @@ public class Keranjang {
         }
         System.out.println("Total Harga Yang Harus di Bayar : " + totalHarga());
     }
-
 }

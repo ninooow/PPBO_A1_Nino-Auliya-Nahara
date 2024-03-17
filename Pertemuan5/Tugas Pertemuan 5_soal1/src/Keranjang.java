@@ -17,7 +17,6 @@ public class Keranjang {
         }else{
             System.out.println("Wes too, Keranjange wes mbludhag!!");
         }
-
     }
     private int totalHarga(){
         int harga = 0;
@@ -35,4 +34,5 @@ public class Keranjang {
         }
         System.out.println("Total Harga Yang Harus di Bayar : " + totalHarga());
     }
+
 }

@@ -1,18 +1,49 @@
 import java.util.HashMap;
+import java.util.EnumMap;
 public class Gudang {
-    private enum bahan{
+    public enum Bahan{
         KAYU,BAUT,CAT
     }
-    private HashMap <String,Integer> isiGudang = new HashMap<String, Integer>();
-    private HashMap <String,Integer> stokBahan = new HashMap<String, Integer>();
+    private Bahan bahan;
+    private EnumMap <Toko.tipeBarang,Integer> isiGudang = new EnumMap<>();
+    private EnumMap <Bahan,Integer> stokBahan = new EnumMap<>();
 
 
+    public EnumMap cekStokBahan(){
+        return stokBahan;
+    }
+    public HashMap cekIsiGudang(){
+        return isiGudang;
+    }
 
-    public
+    public void tambahBahan(Gudang.Bahan bahan, int banyakBahan){
+        if (stokBahan.get(bahan)==null){
+            stokBahan.put(bahan, banyakBahan);
+        }
+        if (stokBahan.get(bahan)!=null){
+            stokBahan.put(bahan, stokBahan.get(bahan)+banyakBahan);
+        }
+    }
 
 
-    void tambahBahan(){
-        
+    public void kurangiBahan(Gudang.Bahan bahan, int banyakBahan){
+        stokBahan.replace(bahan,stokBahan.get(bahan)-banyakBahan);
+    }
+
+    public void buatBarang(Toko.Barang barang, int banyakBarang){
+        switch (barang){
+            case barang.MEJA :
+
+        }
+    }
+
+    public boolean bahanPembuatanMencukupi(Toko.Barang barang, int banyakBarang){
+        switch (barang){
+            case barang.MEJA:
+                if (stokBahan.get(barang.KAYU) >= banyakBarang*3){
+
+                }
+        }
     }
 
 

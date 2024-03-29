@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 public class Toko {
-    ArrayList <Pembeli> antrian = new ArrayList<>();
-    public enum tipeBarang{
+    public enum Barang{
         MEJA, KURSI, LEMARI
     }
+    private Barang tipeBarang;
+    private Gudang gudangBarang;
+    ArrayList <Pembeli> antrian = new ArrayList<>();
 }

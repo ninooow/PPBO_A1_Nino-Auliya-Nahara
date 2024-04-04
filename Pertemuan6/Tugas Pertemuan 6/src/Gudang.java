@@ -20,16 +20,26 @@ public class Gudang {
 
 
     public void cekStokBahan(){
-        System.out.println(" STOK BAHAN : ");
+        System.out.println("STOK BAHAN : ");
         for (int i = 0;i<3;i++){
             System.out.println("Jumlah : " + Bahan.values()[i] + ", saat ini adalah : " + stokBahan.get(Bahan.values()[i]));
         }
+        System.out.println();
     }
+
+    public boolean isIsiGudang(Toko.Barang barang, int beliBarang) {
+        if (beliBarang <= isiGudang.get(barang)){
+            return true;
+        }
+        return false;
+    }
+
     public void cekIsiGudang(){
-        System.out.println(" ISI GUDANG : ");
+        System.out.println("ISI GUDANG : ");
         for (int i = 0;i<3;i++){
             System.out.println("Jumlah : " + Toko.Barang.values()[i] + ", saat ini adalah : " + isiGudang.get(Toko.Barang.values()[i]) + " buah");
         }
+        System.out.println();
     }
 
     public void tambahBahan(Bahan bahan, int banyakBahan){
@@ -43,11 +53,11 @@ public class Gudang {
 
     public void buatBarang(Toko.Barang barang, int banyakBarang){
         if (bahanPembuatanMencukupi(barang,banyakBarang)){
-            System.out.println(banyakBarang + " " + barang + " berhasil ditambahkan ke Gudang");
+            System.out.println(banyakBarang + " " + barang + " berhasil ditambahkan ke Gudang \n");
             masukkanBarangKeGudang(barang, banyakBarang);
         }
         else {
-            System.out.println("Bahan tidak cukup untuk membuat " + banyakBarang + " " + barang);
+            System.out.println("Bahan tidak cukup untuk membuat " + banyakBarang + " " + barang+"\n");
         }
     }
 
@@ -56,10 +66,13 @@ public class Gudang {
         switch (barang){
             case MEJA:
                 max = 10;
+                break;
             case KURSI:
                 max = 20;
+                break;
             case  LEMARI:
                 max = 5;
+                break;
         }
         if (isiGudang.get(barang)+banyakBarang <= max){
             return true;
@@ -75,7 +88,7 @@ public class Gudang {
 
     public void keluarkanBarangDariGudang (Toko.Barang barang, int banyakBarang){
         isiGudang.replace(barang, isiGudang.get(barang)-banyakBarang);
-        System.out.println(banyakBarang + " " + barang + " berhasil dikerluarkan dari Gedung");
+        System.out.println(banyakBarang + " " + barang + " berhasil dikeluarkan dari Gedung \n");
     }
 
 
@@ -90,7 +103,7 @@ public class Gudang {
                 }
                 return false;
             case KURSI:
-                if (slotTersedia(barang, banyakBarang) && (stokBahan.get(Bahan.KAYU) >= banyakBarang * 2) && (stokBahan.get(Bahan.BAUT) >= banyakBarang * 10) && (stokBahan.get(Bahan.CAT) >= banyakBarang * 1)) {
+                if (slotTersedia(barang, banyakBarang) && (stokBahan.get(Bahan.KAYU) >= banyakBarang * 2) && (stokBahan.get(Bahan.BAUT) >= banyakBarang * 10) && (stokBahan.get(Bahan.CAT) >= banyakBarang*1)) {
                     kurangiBahan(Bahan.KAYU, banyakBarang * 2);
                     kurangiBahan(Bahan.BAUT, banyakBarang * 10);
                     kurangiBahan(Bahan.CAT, banyakBarang * 1);

@@ -38,9 +38,6 @@ public class Toko {
     }
 
     public boolean barangDibeliTersedia(Barang barang, int beliBarang){
-        if(gudang.isIsiGudang(barang,beliBarang)){
-            return true;
-        }
-        return false;
+        return gudang.isIsiGudang(barang,beliBarang);
     }
 }

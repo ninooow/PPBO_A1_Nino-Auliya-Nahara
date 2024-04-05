@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.EnumMap;
 public class Gudang {
     public enum Bahan{
@@ -27,12 +26,6 @@ public class Gudang {
         System.out.println();
     }
 
-    public boolean isIsiGudang(Toko.Barang barang, int beliBarang) {
-        if (beliBarang <= isiGudang.get(barang)){
-            return true;
-        }
-        return false;
-    }
 
     public void cekIsiGudang(){
         System.out.println("ISI GUDANG : ");
@@ -121,6 +114,13 @@ public class Gudang {
             default:
                 return false;
         }
+    }
+
+    public boolean isIsiGudang(Toko.Barang barang, int beliBarang) {
+        if (beliBarang <= isiGudang.get(barang)){
+            return true;
+        }
+        return false;
     }
 
 }

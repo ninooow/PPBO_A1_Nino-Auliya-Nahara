@@ -81,7 +81,7 @@ public class Gudang {
 
     public void keluarkanBarangDariGudang (Toko.Barang barang, int banyakBarang){
         isiGudang.replace(barang, isiGudang.get(barang)-banyakBarang);
-        System.out.println(banyakBarang + " " + barang + " berhasil dikeluarkan dari Gedung \n");
+        System.out.println(banyakBarang + " " + barang + " berhasil dikeluarkan dari Gudang \n");
     }
 
 

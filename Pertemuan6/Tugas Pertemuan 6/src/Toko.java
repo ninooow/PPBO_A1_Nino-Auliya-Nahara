@@ -3,7 +3,7 @@ public class Toko {
     public enum Barang{
         MEJA, KURSI, LEMARI
     }
-    private Barang Barang;
+    private Barang barang;
     private Gudang gudang = new Gudang();
     ArrayList <Pembeli> antrian = new ArrayList<>();
 

@@ -12,8 +12,13 @@ public class Toko {
     }
 
     public void tambahAntrian(Pembeli pembeli){
-        antrian.add(pembeli);
-        System.out.println("Berhasil menambah antrian \n");
+        if (antrianPenuh()) {
+            antrian.add(pembeli);
+            System.out.println("Berhasil menambah antrian \n");
+        }
+        else{
+            System.out.println("Antrian sudah penuh \n");
+        }
     }
 
     public void selesaikanAntrian(){
@@ -39,5 +44,11 @@ public class Toko {
 
     public boolean barangDibeliTersedia(Barang barang, int beliBarang){
         return gudang.isIsiGudang(barang,beliBarang);
+    }
+    public boolean antrianPenuh(){
+        if (antrian.size() < 5){
+            return true;
+        }
+        return false;
     }
 }

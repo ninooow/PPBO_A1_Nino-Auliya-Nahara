@@ -8,10 +8,6 @@ public class Truck extends Vehicle{
         this.cargoCapacity = cargoCapacity;
     }
 
-    public void setCargoCapacity(int cargoCapacity) {
-        this.cargoCapacity = cargoCapacity;
-    }
-
     public double discount(){
         if (cargoCapacity>=2000){
             return super.discount() + super.getRentalPrice()*0.1;

@@ -18,7 +18,7 @@ public class Main {
         zombie1.entityInfo();
         zombie2.entityInfo();
 
-        System.out.println("============================================\n");
+        System.out.println("===========================================\n");
 
         System.out.println("TES INTERAKSI MERCHANT");
         P1.interact(merchant1);
@@ -27,14 +27,14 @@ public class Main {
         P1.attack(merchant1);
         P1.attack(merchant1);
         P1.interact(merchant1);
-        System.out.println("============================================\n");
+        System.out.println("===========================================\n");
 
         System.out.println("TES SERANG ZOMBIE");
         P1.attack(zombie1);
         P1.attack(zombie1);
         P1.attack(zombie1);
         zombie1.attack((P1));
-        System.out.println("============================================\n");
+        System.out.println("===========================================\n");
 
         System.out.println("TES SERANG PLAYER");
         zombie2.attack(P1);
